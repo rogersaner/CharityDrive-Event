@@ -1,6 +1,16 @@
 <?php
 
 /**
+ * Implementation of hook_ctools_plugin_api().
+ */
+function charity_drive_event_ctools_plugin_api() {
+  list($module, $api) = func_get_args();
+  if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => 1);
+  }
+}
+
+/**
  * Implementation of hook_node_info().
  */
 function charity_drive_event_node_info() {
