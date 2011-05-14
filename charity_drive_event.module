@@ -1,0 +1,3 @@
+<?php
+
+include_once('charity_drive_event.features.inc');
